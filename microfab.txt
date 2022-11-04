@@ -1,0 +1,25 @@
+ export MICROFAB_CONFIG='{
+ "port":7000,
+"endorsing_organizations":[
+        {
+            "name": "Police"
+        },
+        {
+            "name": "Insurance"
+        },
+        {
+            "name": "People"
+        }
+    ],
+    "channels":[
+        {
+            "name": "roadaccidents",
+            "endorsing_organizations":[
+		    "Police",
+                "Insurance",
+                "People"
+            ],
+            "capability_level": "V2_0"
+        }
+    ]
+}'
