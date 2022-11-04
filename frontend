@@ -1,0 +1,48 @@
+index.tsx
+import type { NextPage } from "next";
+import Link from "next/link";
+import styles from "../styles/index.module.css";
+const Home: NextPage = () => {
+return (
+<div className={styles.container}>
+<div className={styles.title}>Evidence Management</div>
+<Link href="/mvd">
+<div className={styles.button}>MVD</div>
+</Link>
+<Link href="/insurance">
+<div className={styles.button}>Insurance</div>
+</Link>
+<Link href="/user">
+<div className={styles.button}>User</div>
+</Link>
+</div>
+);
+};
+export default Home;
+insurance.tsx
+import { NextPage } from "next";
+import Link from "next/link";
+import styles from "../styles/mvd.module.css";
+const Insurance: NextPage = () => {
+return (
+<div className={styles.container}>
+<div className={styles.title}>Insurance</div>
+<div className={styles.inputContainer}>
+<div className={styles.label}>Username</div>
+<input id="username" className={styles.input} type="text" />
+</div>
+<div className={styles.inputContainer}>
+<div className={styles.label}>Password</div>
+<input id="password" className={styles.input} type="text" /> </div>
+<div className={styles.buttonContainer}>
+<Link href="/insurance/login">
+<div className={styles.button}>Login</div>
+</Link>
+<Link href="/insurance/register">
+<div className={styles.button}>Register</div>
+</Link>
+</div>
+</div>
+);
+};
+export default Insurance;
